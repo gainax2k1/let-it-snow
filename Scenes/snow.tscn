@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://k7gcv7rjlii0"]
+
+[ext_resource type="Texture2D" uid="uid://dq6x2wxdft0c3" path="res://Graphics/snow.png" id="1_rl54q"]
+
+[node name="Snow" type="Node2D" unique_id=2066052173]
+
+[node name="ParallaxBackground" type="Parallax2D" parent="." unique_id=2049541555]
+scroll_scale = Vector2(100, 100)
+scroll_offset = Vector2(27, 11)
+repeat_size = Vector2(1300, 780)
+autoscroll = Vector2(-10, 20)
+follow_viewport = false
+
+[node name="Snow" type="Sprite2D" parent="ParallaxBackground" unique_id=1342253982]
+position = Vector2(102, 116)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow2" type="Sprite2D" parent="ParallaxBackground" unique_id=342302106]
+position = Vector2(358, 117)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow3" type="Sprite2D" parent="ParallaxBackground" unique_id=436800759]
+position = Vector2(356, 375)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow4" type="Sprite2D" parent="ParallaxBackground" unique_id=531375893]
+position = Vector2(102, 383)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow5" type="Sprite2D" parent="ParallaxBackground" unique_id=1721032248]
+position = Vector2(356, 631)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow6" type="Sprite2D" parent="ParallaxBackground" unique_id=1238825248]
+position = Vector2(90, 654)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow7" type="Sprite2D" parent="ParallaxBackground" unique_id=1285024316]
+position = Vector2(630, 113)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow8" type="Sprite2D" parent="ParallaxBackground" unique_id=296215240]
+position = Vector2(622, 375)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow9" type="Sprite2D" parent="ParallaxBackground" unique_id=710738400]
+position = Vector2(620, 636)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow12" type="Sprite2D" parent="ParallaxBackground" unique_id=917327965]
+position = Vector2(892, 119)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow14" type="Sprite2D" parent="ParallaxBackground" unique_id=1547690413]
+position = Vector2(892, 378)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow15" type="Sprite2D" parent="ParallaxBackground" unique_id=1201413841]
+position = Vector2(1151, 117)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow16" type="Sprite2D" parent="ParallaxBackground" unique_id=344923416]
+position = Vector2(1149, 373)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow17" type="Sprite2D" parent="ParallaxBackground" unique_id=2037575299]
+position = Vector2(1151, 639)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow18" type="Sprite2D" parent="ParallaxBackground" unique_id=321262958]
+position = Vector2(892, 634)
+texture = ExtResource("1_rl54q")
+
+[node name="ParallaxBackground2" type="Parallax2D" parent="." unique_id=447838622]
+scroll_scale = Vector2(100, 100)
+scroll_offset = Vector2(0, 39)
+repeat_size = Vector2(1300, 780)
+autoscroll = Vector2(-9, 30)
+follow_viewport = false
+
+[node name="Snow" type="Sprite2D" parent="ParallaxBackground2" unique_id=205141277]
+position = Vector2(102, 116)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow2" type="Sprite2D" parent="ParallaxBackground2" unique_id=1807979022]
+position = Vector2(358, 117)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow3" type="Sprite2D" parent="ParallaxBackground2" unique_id=2036027331]
+position = Vector2(355, 376)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow4" type="Sprite2D" parent="ParallaxBackground2" unique_id=1305679009]
+position = Vector2(102, 383)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow5" type="Sprite2D" parent="ParallaxBackground2" unique_id=1960595602]
+position = Vector2(356, 631)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow6" type="Sprite2D" parent="ParallaxBackground2" unique_id=1624911083]
+position = Vector2(90, 654)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow7" type="Sprite2D" parent="ParallaxBackground2" unique_id=456438576]
+position = Vector2(630, 113)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow8" type="Sprite2D" parent="ParallaxBackground2" unique_id=641614179]
+position = Vector2(622, 375)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow9" type="Sprite2D" parent="ParallaxBackground2" unique_id=1339027350]
+position = Vector2(620, 636)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow12" type="Sprite2D" parent="ParallaxBackground2" unique_id=438315897]
+position = Vector2(892, 119)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow14" type="Sprite2D" parent="ParallaxBackground2" unique_id=497080011]
+position = Vector2(892, 378)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow15" type="Sprite2D" parent="ParallaxBackground2" unique_id=2111910156]
+position = Vector2(1151, 117)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow16" type="Sprite2D" parent="ParallaxBackground2" unique_id=1396917591]
+position = Vector2(1149, 373)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow17" type="Sprite2D" parent="ParallaxBackground2" unique_id=53785867]
+position = Vector2(1151, 639)
+texture = ExtResource("1_rl54q")
+
+[node name="Snow18" type="Sprite2D" parent="ParallaxBackground2" unique_id=25258375]
+position = Vector2(892, 634)
+texture = ExtResource("1_rl54q")

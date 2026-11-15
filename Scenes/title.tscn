@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cjuyv3mbkqb75"]
+
+[ext_resource type="PackedScene" uid="uid://k7gcv7rjlii0" path="res://Scenes/snow.tscn" id="1_ekrfg"]
+[ext_resource type="Texture2D" uid="uid://c4wf8kgxn0luc" path="res://Graphics/title_graphic.png" id="1_w31pl"]
+
+[node name="Title" type="Node2D" unique_id=1911914823]
+
+[node name="Snow" parent="." unique_id=2066052173 instance=ExtResource("1_ekrfg")]
+
+[node name="TitleGraphic" type="Sprite2D" parent="." unique_id=212238489]
+position = Vector2(878, 530)
+texture = ExtResource("1_w31pl")
+
+[node name="Button" type="Button" parent="." unique_id=72896222]
+offset_left = 483.0
+offset_top = 520.0
+offset_right = 665.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0.24660903, 0.4683491, 1, 1)
+theme_override_font_sizes/font_size = 36
+text = "Start"

@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Let It Snow!"
+run/main_scene="uid://cjuyv3mbkqb75"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -43,3 +44,4 @@ folder_colors={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.1992102, 0.42818514, 1, 1)

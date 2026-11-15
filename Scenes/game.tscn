@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://dwyffr2vv0g0b"]
 
+[ext_resource type="PackedScene" uid="uid://k7gcv7rjlii0" path="res://Scenes/snow.tscn" id="1_ebmjs"]
+
 [node name="Game" type="Node2D" unique_id=1676320545]
+
+[node name="Snow" parent="." unique_id=2066052173 instance=ExtResource("1_ebmjs")]
