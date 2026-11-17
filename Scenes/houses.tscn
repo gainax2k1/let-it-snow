@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://nk6qwt1o8tdn"]
+
+[ext_resource type="Texture2D" uid="uid://dqfm8jv0rqt6f" path="res://Graphics/home-outside.png" id="1_8fapq"]
+[ext_resource type="Texture2D" uid="uid://sjhsdc8ui5mx" path="res://Graphics/friends-house-outside.png" id="2_j3bsq"]
+[ext_resource type="Texture2D" uid="uid://b628204lxq22h" path="res://Graphics/shop-outside.png" id="3_r7qak"]
+[ext_resource type="Texture2D" uid="uid://cx2jg6gmlra1h" path="res://Graphics/pine-tree.png" id="4_j3bsq"]
+
+[node name="Houses" type="Node2D" unique_id=807584422]
+metadata/_edit_horizontal_guides_ = [286.0]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1278663590]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(900, 0)
+
+[node name="HomeOutside" type="Sprite2D" parent="Parallax2D" unique_id=262330994]
+position = Vector2(-67, 238)
+texture = ExtResource("1_8fapq")
+
+[node name="FriendsHouseOutside" type="Sprite2D" parent="Parallax2D" unique_id=590806537]
+position = Vector2(224, 238)
+texture = ExtResource("2_j3bsq")
+
+[node name="ShopOutside" type="Sprite2D" parent="Parallax2D" unique_id=1301258957]
+position = Vector2(515, 237)
+texture = ExtResource("3_r7qak")
+
+[node name="PineTree" type="Sprite2D" parent="Parallax2D" unique_id=972475434]
+position = Vector2(32, 189.00003)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("4_j3bsq")
+
+[node name="PineTree2" type="Sprite2D" parent="Parallax2D" unique_id=1281481361]
+position = Vector2(390.99997, 194.99998)
+scale = Vector2(0.36328125, 0.36328125)
+texture = ExtResource("4_j3bsq")
+
+[node name="PineTree3" type="Sprite2D" parent="Parallax2D" unique_id=35562715]
+position = Vector2(703, 219.00002)
+scale = Vector2(0.453125, 0.26953125)
+texture = ExtResource("4_j3bsq")

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cqk7pjtv6jen8"]
+
+[ext_resource type="Texture2D" uid="uid://0wk6q1hjngvr" path="res://Graphics/cloud_small.png" id="1_hmje7"]
+[ext_resource type="Texture2D" uid="uid://bf6s02eceljfv" path="res://Graphics/cloud_large.png" id="1_ntjbq"]
+
+[node name="Clouds" type="Node2D" unique_id=841633028]
+
+[node name="SmallClouds" type="Parallax2D" parent="." unique_id=916665228]
+scroll_offset = Vector2(0, -17)
+repeat_size = Vector2(2400, 0)
+autoscroll = Vector2(-8, 0)
+
+[node name="CloudSmall" type="Sprite2D" parent="SmallClouds" unique_id=1571791898]
+position = Vector2(138, 167)
+texture = ExtResource("1_hmje7")
+
+[node name="CloudSmall2" type="Sprite2D" parent="SmallClouds" unique_id=211570288]
+position = Vector2(340, 143)
+texture = ExtResource("1_hmje7")
+
+[node name="CloudSmall3" type="Sprite2D" parent="SmallClouds" unique_id=1549650331]
+position = Vector2(540, 162)
+texture = ExtResource("1_hmje7")
+
+[node name="CloudSmall4" type="Sprite2D" parent="SmallClouds" unique_id=63982404]
+position = Vector2(694, 185)
+texture = ExtResource("1_hmje7")
+
+[node name="CloudSmall6" type="Sprite2D" parent="SmallClouds" unique_id=2112026299]
+position = Vector2(962, 159)
+texture = ExtResource("1_hmje7")
+
+[node name="CloudSmall8" type="Sprite2D" parent="SmallClouds" unique_id=773307983]
+position = Vector2(1268, 184)
+texture = ExtResource("1_hmje7")
+
+[node name="CloudSmall10" type="Sprite2D" parent="SmallClouds" unique_id=2133608743]
+position = Vector2(1600, 200)
+texture = ExtResource("1_hmje7")
+
+[node name="CloudSmall12" type="Sprite2D" parent="SmallClouds" unique_id=1366088799]
+position = Vector2(1927, 155)
+texture = ExtResource("1_hmje7")
+
+[node name="CloudSmall14" type="Sprite2D" parent="SmallClouds" unique_id=1478090540]
+position = Vector2(2223, 175)
+texture = ExtResource("1_hmje7")
+
+[node name="BigClouds" type="Parallax2D" parent="." unique_id=1811218699]
+repeat_size = Vector2(2200, 0)
+autoscroll = Vector2(-15, 0)
+
+[node name="CloudLarge" type="Sprite2D" parent="BigClouds" unique_id=1805716270]
+position = Vector2(91, 97)
+texture = ExtResource("1_ntjbq")
+
+[node name="CloudLarge2" type="Sprite2D" parent="BigClouds" unique_id=984323798]
+position = Vector2(556, 86)
+texture = ExtResource("1_ntjbq")
+
+[node name="CloudLarge3" type="Sprite2D" parent="BigClouds" unique_id=862833773]
+position = Vector2(926, 107)
+texture = ExtResource("1_ntjbq")
+
+[node name="CloudLarge4" type="Sprite2D" parent="BigClouds" unique_id=1097298585]
+position = Vector2(1266, 87)
+texture = ExtResource("1_ntjbq")
+
+[node name="CloudLarge5" type="Sprite2D" parent="BigClouds" unique_id=1657991005]
+position = Vector2(1655, 98)
+texture = ExtResource("1_ntjbq")
+
+[node name="CloudLarge6" type="Sprite2D" parent="BigClouds" unique_id=2066623906]
+position = Vector2(2008, 48)
+texture = ExtResource("1_ntjbq")

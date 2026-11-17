@@ -1,7 +1,129 @@
 [gd_scene format=3 uid="uid://dwyffr2vv0g0b"]
 
 [ext_resource type="PackedScene" uid="uid://k7gcv7rjlii0" path="res://Scenes/snow.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://cqk7pjtv6jen8" path="res://Scenes/clouds.tscn" id="1_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://cv14qe5d01ofk" path="res://Graphics/snow-bg.png" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://nk6qwt1o8tdn" path="res://Scenes/houses.tscn" id="4_3dryh"]
+[ext_resource type="Texture2D" uid="uid://cicaxubwy7nj" path="res://Graphics/sidewalk.png" id="5_wowpa"]
+[ext_resource type="SpriteFrames" uid="uid://c7703a5py3wii" path="res://Graphics/snow-sidewalk-frames.tres" id="6_i6g32"]
 
 [node name="Game" type="Node2D" unique_id=1676320545]
+metadata/_edit_horizontal_guides_ = [662.0, 604.0, 628.0]
 
-[node name="Snow" parent="." unique_id=2066052173 instance=ExtResource("1_ebmjs")]
+[node name="Clouds" parent="." unique_id=841633028 instance=ExtResource("1_wrm1d")]
+position = Vector2(-48, -15)
+
+[node name="SnowGround" type="TileMapLayer" parent="." unique_id=2105886224]
+
+[node name="SnowBg" type="Sprite2D" parent="SnowGround" unique_id=1332615918]
+position = Vector2(-130, 533)
+texture = ExtResource("2_qxrlw")
+
+[node name="SnowBg2" type="Sprite2D" parent="SnowGround" unique_id=680322025]
+position = Vector2(126, 533)
+texture = ExtResource("2_qxrlw")
+
+[node name="SnowBg3" type="Sprite2D" parent="SnowGround" unique_id=2003483844]
+position = Vector2(382, 533)
+texture = ExtResource("2_qxrlw")
+
+[node name="SnowBg4" type="Sprite2D" parent="SnowGround" unique_id=1847703174]
+position = Vector2(638, 533)
+texture = ExtResource("2_qxrlw")
+
+[node name="SnowBg5" type="Sprite2D" parent="SnowGround" unique_id=643898425]
+position = Vector2(894, 533)
+texture = ExtResource("2_qxrlw")
+
+[node name="SnowBg6" type="Sprite2D" parent="SnowGround" unique_id=146956560]
+position = Vector2(1149, 533)
+texture = ExtResource("2_qxrlw")
+
+[node name="SnowBg7" type="Sprite2D" parent="SnowGround" unique_id=1625032189]
+position = Vector2(1404, 533)
+texture = ExtResource("2_qxrlw")
+
+[node name="Houses" parent="." unique_id=807584422 instance=ExtResource("4_3dryh")]
+position = Vector2(-33, 190)
+
+[node name="Sidewalk" type="TileMapLayer" parent="." unique_id=1173466607]
+
+[node name="Sidewalk2" type="Sprite2D" parent="Sidewalk" unique_id=723007469]
+position = Vector2(-128, 620)
+texture = ExtResource("5_wowpa")
+
+[node name="Sidewalk3" type="Sprite2D" parent="Sidewalk" unique_id=1075559461]
+position = Vector2(128, 620)
+texture = ExtResource("5_wowpa")
+
+[node name="Sidewalk4" type="Sprite2D" parent="Sidewalk" unique_id=2114303497]
+position = Vector2(384, 620)
+texture = ExtResource("5_wowpa")
+
+[node name="Sidewalk5" type="Sprite2D" parent="Sidewalk" unique_id=1901006983]
+position = Vector2(640, 620)
+texture = ExtResource("5_wowpa")
+
+[node name="Sidewalk6" type="Sprite2D" parent="Sidewalk" unique_id=1394457194]
+position = Vector2(896, 620)
+texture = ExtResource("5_wowpa")
+
+[node name="Sidewalk7" type="Sprite2D" parent="Sidewalk" unique_id=2056622386]
+position = Vector2(1152, 620)
+texture = ExtResource("5_wowpa")
+
+[node name="Sidewalk8" type="Sprite2D" parent="Sidewalk" unique_id=39610290]
+position = Vector2(1408, 620)
+texture = ExtResource("5_wowpa")
+
+[node name="FallingSnow" parent="." unique_id=2066052173 instance=ExtResource("1_ebmjs")]
+
+[node name="Snow01" type="AnimatedSprite2D" parent="." unique_id=573941232]
+position = Vector2(192, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow02" type="AnimatedSprite2D" parent="." unique_id=275103893]
+position = Vector2(320, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow03" type="AnimatedSprite2D" parent="." unique_id=2117574442]
+position = Vector2(448, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow04" type="AnimatedSprite2D" parent="." unique_id=1646818329]
+position = Vector2(576, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow05" type="AnimatedSprite2D" parent="." unique_id=1115452133]
+position = Vector2(704, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow06" type="AnimatedSprite2D" parent="." unique_id=53595469]
+position = Vector2(832, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow07" type="AnimatedSprite2D" parent="." unique_id=1343003602]
+position = Vector2(960, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow08" type="AnimatedSprite2D" parent="." unique_id=1377574262]
+position = Vector2(1088, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow09" type="AnimatedSprite2D" parent="." unique_id=315186513]
+position = Vector2(1216, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
+
+[node name="Snow10" type="AnimatedSprite2D" parent="." unique_id=1645464072]
+position = Vector2(1344, 372)
+sprite_frames = ExtResource("6_i6g32")
+frame = 1
