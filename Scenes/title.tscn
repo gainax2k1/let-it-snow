@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://k7gcv7rjlii0" path="res://Scenes/snow.tscn" id="1_ekrfg"]
 [ext_resource type="Texture2D" uid="uid://c4wf8kgxn0luc" path="res://Graphics/title_graphic.png" id="1_w31pl"]
+[ext_resource type="Script" uid="uid://dej1hq3qpkhbh" path="res://Scripts/TitleButton.gd" id="3_fp2oq"]
 
 [node name="Title" type="Node2D" unique_id=1911914823]
 
@@ -19,3 +20,6 @@ offset_bottom = 572.0
 theme_override_colors/font_color = Color(0.24660903, 0.4683491, 1, 1)
 theme_override_font_sizes/font_size = 36
 text = "Start"
+script = ExtResource("3_fp2oq")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

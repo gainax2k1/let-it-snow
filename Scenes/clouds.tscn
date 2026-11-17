@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bf6s02eceljfv" path="res://Graphics/cloud_large.png" id="1_ntjbq"]
 
 [node name="Clouds" type="Node2D" unique_id=841633028]
+position = Vector2(0, 272)
 
 [node name="SmallClouds" type="Parallax2D" parent="." unique_id=916665228]
 scroll_offset = Vector2(0, -17)
