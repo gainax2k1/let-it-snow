@@ -9,7 +9,8 @@ var scene_current: String = "res://Scenes/game.tscn" ## string "res://Scenes/...
 var scene_previous : String = "res://Scenes/game.tscn" ## string "res://Scenes/...tcsn"
 
 #player info
-@export var playerLvl = 0
+@export var playerLvl = 1
+@export var shovelLvl = 1 ## level of snow removal tool
 @export var player_position = 0 ## Player's position on sidewalk 
 
 #SnowTracker
@@ -17,6 +18,18 @@ const MAX_SNOW_LEVEL = 8
 const MAX_SNOW_BLOCK = 10
 @export var current_snow_levels = [1,1,1,1,1,1,1,1,1,1] ## Snow level per square ( Snow#:level )
 
+func increment_snow() -> void: ## goes from current player_position to end of current_snow_levels, incrementing every level
+	if player_position >= MAX_SNOW_BLOCK:
+		print("No snow left to increment.")
+		return
+	var start_pos = player_position
+	while start_pos < MAX_SNOW_BLOCK: 
+		print("start_pos:", start_pos)
+		if current_snow_levels[start_pos] < MAX_SNOW_LEVEL-1:
+			current_snow_levels[start_pos] += 1
+		start_pos += 1
+	return
+	
 
 #might need reworking depending on how music get's set up...
 func bg_music_play(track_name : String) -> void: ## recieves "res://Audio/Music/...ogg"
