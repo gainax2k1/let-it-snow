@@ -6,7 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cv14qe5d01ofk" path="res://Graphics/snow-bg.png" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://nk6qwt1o8tdn" path="res://Scenes/houses.tscn" id="4_3dryh"]
 [ext_resource type="Texture2D" uid="uid://cicaxubwy7nj" path="res://Graphics/sidewalk.png" id="5_wowpa"]
-[ext_resource type="SpriteFrames" uid="uid://c7703a5py3wii" path="res://Graphics/snow-sidewalk-frames.tres" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://bkw3mgpdrn84s" path="res://Scenes/HeroCat.tscn" id="6_v158k"]
+[ext_resource type="PackedScene" uid="uid://g4d4538q0a70" path="res://Scenes/snow_block.tscn" id="8_v158k"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ga5kc"]
+distance = -3.0
 
 [node name="Game" type="Node2D" unique_id=1676320545]
 script = ExtResource("1_1l0tm")
@@ -78,56 +82,43 @@ texture = ExtResource("5_wowpa")
 position = Vector2(1408, 620)
 texture = ExtResource("5_wowpa")
 
+[node name="SidewalkSurface" type="Area2D" parent="Sidewalk" unique_id=1851909190]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sidewalk/SidewalkSurface" unique_id=1042470271]
+position = Vector2(9, 625)
+shape = SubResource("WorldBoundaryShape2D_ga5kc")
+
+[node name="HeroCat" parent="." unique_id=1710785071 instance=ExtResource("6_v158k")]
+position = Vector2(70, 559)
+
 [node name="FallingSnow" parent="." unique_id=2066052173 instance=ExtResource("1_ebmjs")]
 
-[node name="SnowSidewalk" type="TileMapLayer" parent="." unique_id=2077409751]
+[node name="SnowBlock1" parent="." unique_id=728841707 instance=ExtResource("8_v158k")]
+position = Vector2(191, 372)
 
-[node name="Snow01" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=573941232]
-position = Vector2(192, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock2" parent="." unique_id=2053706484 instance=ExtResource("8_v158k")]
+position = Vector2(319, 372)
 
-[node name="Snow02" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=275103893]
-position = Vector2(320, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock3" parent="." unique_id=555931962 instance=ExtResource("8_v158k")]
+position = Vector2(447, 372)
 
-[node name="Snow03" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=2117574442]
-position = Vector2(448, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock4" parent="." unique_id=1790489029 instance=ExtResource("8_v158k")]
+position = Vector2(575, 372)
 
-[node name="Snow04" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=1646818329]
-position = Vector2(576, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock5" parent="." unique_id=1582441030 instance=ExtResource("8_v158k")]
+position = Vector2(703, 372)
 
-[node name="Snow05" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=1115452133]
-position = Vector2(704, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock6" parent="." unique_id=444170842 instance=ExtResource("8_v158k")]
+position = Vector2(831, 372)
 
-[node name="Snow06" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=53595469]
-position = Vector2(832, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock7" parent="." unique_id=913025421 instance=ExtResource("8_v158k")]
+position = Vector2(959, 372)
 
-[node name="Snow07" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=1343003602]
-position = Vector2(960, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock8" parent="." unique_id=744735750 instance=ExtResource("8_v158k")]
+position = Vector2(1087, 372)
 
-[node name="Snow08" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=1377574262]
-position = Vector2(1088, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock9" parent="." unique_id=799628616 instance=ExtResource("8_v158k")]
+position = Vector2(1215, 372)
 
-[node name="Snow09" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=315186513]
-position = Vector2(1216, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
-
-[node name="Snow10" type="AnimatedSprite2D" parent="SnowSidewalk" unique_id=1645464072]
-position = Vector2(1344, 372)
-sprite_frames = ExtResource("6_i6g32")
-frame = 1
+[node name="SnowBlock10" parent="." unique_id=1015865722 instance=ExtResource("8_v158k")]
+position = Vector2(1343, 372)

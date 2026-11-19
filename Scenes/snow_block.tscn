@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://g4d4538q0a70"]
+
+[ext_resource type="SpriteFrames" uid="uid://c7703a5py3wii" path="res://Graphics/snow-sidewalk-frames.tres" id="1_f6i1r"]
+[ext_resource type="Script" uid="uid://qe8pb5qwk0o5" path="res://Scripts/snow_block.gd" id="1_yraww"]
+
+[node name="SnowBlock" type="Node2D" unique_id=728841707]
+script = ExtResource("1_yraww")
+locked = null
+snowHP = null
+snowlvl = null
+start_snow_HP = null
+
+[node name="SnowUnit" type="AnimatedSprite2D" parent="." unique_id=1795113924]
+unique_name_in_owner = true
+sprite_frames = ExtResource("1_f6i1r")
+frame = 1

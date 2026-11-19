@@ -1,5 +1,9 @@
 extends Node2D
 
+#timer
+var timer_max : float = 10.0 ## amount of time on the clock for the round, to be determined by player lvl...?
+
+
 #music settings
 var bg_music_playing : bool = true ## Set in menu
 var bg_music_track : String = "res://Audio/gloomy_bg.ogg" ## string "res:// ...ogg"
@@ -11,25 +15,28 @@ var scene_previous : String = "res://Scenes/game.tscn" ## string "res://Scenes/.
 #player info
 @export var playerLvl = 1
 @export var shovelLvl = 1 ## level of snow removal tool
-@export var player_position = 0 ## Player's position on sidewalk 
+## not needed? @export var player_position : int = 0 ## Player's position on sidewalk 
+@export var player_spawn_position : Vector2 = Vector2(70,560)
+@export var player_cash : int = 0 ## ammount of money player has earned, starting with zero
 
 #SnowTracker
-const MAX_SNOW_LEVEL = 8
-const MAX_SNOW_BLOCK = 10
-@export var current_snow_levels = [1,1,1,1,1,1,1,1,1,1] ## Snow level per square ( Snow#:level )
+const MAX_SNOW_LEVEL = 8 ## Max lvl of snow, coincides with largest available animation frame
+const MAX_SNOW_BLOCK = 10 ## Max number of blocks present for shoveling (unneccessary?)
+## not needed? @export var current_snow_levels = [1,1,1,1,1,1,1,1,1,1] ## Snow level per square ( Snow#:level)
 
-func increment_snow() -> void: ## goes from current player_position to end of current_snow_levels, incrementing every level
-	if player_position >= MAX_SNOW_BLOCK:
-		print("No snow left to increment.")
-		return
-	var start_pos = player_position
-	while start_pos < MAX_SNOW_BLOCK: 
-		print("start_pos:", start_pos)
-		if current_snow_levels[start_pos] < MAX_SNOW_LEVEL-1:
-			current_snow_levels[start_pos] += 1
-		start_pos += 1
-	return
-	
+func _ready() -> void:
+	set_timer()
+
+func _on_timer_timeout(): ## need to add the daily reset shtuff here
+	print("Time's up for the day!")
+
+func set_timer() -> void:
+	%Timer.wait_time = timer_max
+
+func start_timer() -> void:
+	set_timer()
+	%Timer.start()
+
 
 #might need reworking depending on how music get's set up...
 func bg_music_play(track_name : String) -> void: ## recieves "res://Audio/Music/...ogg"

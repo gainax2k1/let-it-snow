@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://imaf60fomqpl"]
+
+[ext_resource type="Texture2D" uid="uid://cqxeoabip2ygk" path="res://Graphics/hero-cat-shovel-Sheet.png" id="1_o5alv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rwho"]
+atlas = ExtResource("1_o5alv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p046d"]
+atlas = ExtResource("1_o5alv")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6wrw"]
+atlas = ExtResource("1_o5alv")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rwho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p046d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6wrw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]

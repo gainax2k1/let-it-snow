@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bkw3mgpdrn84s"]
+
+[ext_resource type="Script" uid="uid://cfxqmf6g66de5" path="res://Scripts/HeroCat.gd" id="1_pyhi2"]
+[ext_resource type="SpriteFrames" uid="uid://imaf60fomqpl" path="res://Graphics/hero-cat-red-shovel.tres" id="2_1mtmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga5kc"]
+size = Vector2(46, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e78ct"]
+size = Vector2(38, 113)
+
+[node name="HeroCat" type="CharacterBody2D" unique_id=1710785071]
+script = ExtResource("1_pyhi2")
+
+[node name="HeroCat" type="AnimatedSprite2D" parent="." unique_id=394716228]
+position = Vector2(-0.99999064, -1)
+scale = Vector2(1.90625, 1.90625)
+sprite_frames = ExtResource("2_1mtmd")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144765425]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_ga5kc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=452073288]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=414233396]
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_e78ct")
