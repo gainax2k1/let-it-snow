@@ -1,7 +1,7 @@
 extends Node2D
 
 #timer
-var timer_max : float = 3.0 ## amount of time on the clock for the round, to be determined by player lvl...?
+var timer_max : float = 10.0 ## amount of time on the clock for the round, to be determined by player lvl...?
 
 
 # Called when the node enters the scene tree for the first time.

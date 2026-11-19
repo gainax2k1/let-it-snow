@@ -83,16 +83,11 @@ texture = ExtResource("5_wowpa")
 position = Vector2(1408, 620)
 texture = ExtResource("5_wowpa")
 
-[node name="SidewalkSurface" type="Area2D" parent="Sidewalk" unique_id=1851909190]
+[node name="SidewalkSurface" type="StaticBody2D" parent="." unique_id=1836280349]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sidewalk/SidewalkSurface" unique_id=1042470271]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SidewalkSurface" unique_id=1042470271]
 position = Vector2(761.5, 742.5)
 shape = SubResource("RectangleShape2D_ga5kc")
-
-[node name="HeroCat" parent="." unique_id=1710785071 instance=ExtResource("6_v158k")]
-unique_name_in_owner = true
-position = Vector2(49, 563)
-disable_mode = 1
 
 [node name="SnowBlock1" parent="." unique_id=728841707 instance=ExtResource("8_v158k")]
 position = Vector2(191, 372)
@@ -125,6 +120,11 @@ position = Vector2(1215, 372)
 position = Vector2(1343, 372)
 
 [node name="FallingSnow" parent="." unique_id=2066052173 instance=ExtResource("1_ebmjs")]
+
+[node name="HeroCat" parent="." unique_id=1710785071 instance=ExtResource("6_v158k")]
+unique_name_in_owner = true
+position = Vector2(49, 563)
+disable_mode = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=713553142]
 unique_name_in_owner = true

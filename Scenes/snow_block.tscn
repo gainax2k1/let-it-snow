@@ -30,9 +30,9 @@ position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_e78ct")
 
 [node name="SnowTimer" type="Timer" parent="." unique_id=1736664898]
-wait_time = 1.812
 autostart = true
 ignore_time_scale = true
 
 [connection signal="body_shape_entered" from="SnowUnit/Area2D" to="." method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_exited" from="SnowUnit/Area2D" to="." method="_on_area_2d_body_shape_exited"]
 [connection signal="timeout" from="SnowTimer" to="." method="_on_snow_timer_timeout"]

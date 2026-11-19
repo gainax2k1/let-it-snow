@@ -26,8 +26,8 @@ func move_hero(): ## recieves inputs and moves hero-cat
 	
 	var move_vector: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
-	print("move_vector: ", move_vector )
-	print("movehero: ", position)
+	#print("move_vector: ", move_vector )
+	#print("movehero: ", position)
 	
 	velocity = move_vector * SPEED
 	
