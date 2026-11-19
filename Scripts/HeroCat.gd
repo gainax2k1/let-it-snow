@@ -5,8 +5,9 @@ const SPEED = 100.0
 
 
 func _ready() -> void:
-	position = GameManager.player_spawn_position
-
+	#position = GameManager.player_spawn_position
+	pass
+	
 func _process(delta: float) -> void: ## prolly save to remove
 	if Input.is_action_just_pressed("ui_select"):
 		print("ui_select pressed in herocat")  
@@ -16,10 +17,20 @@ func _process(delta: float) -> void: ## prolly save to remove
 func _physics_process(delta: float) -> void:
 	move_hero()
 	
+	
+func stop_hero() -> void:
+	%HeroCat.stop()
+	%HeroCat.frame = 0
+	
 func move_hero(): ## recieves inputs and moves hero-cat
+	
 	var move_vector: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
+	print("move_vector: ", move_vector )
+	print("movehero: ", position)
+	
 	velocity = move_vector * SPEED
+	
 	'''
 	if velocity.x > 0:
 		$HeroCatBig.play("Facing-Right")

@@ -1,8 +1,5 @@
 extends Node2D
 
-#timer
-var timer_max : float = 10.0 ## amount of time on the clock for the round, to be determined by player lvl...?
-
 
 #music settings
 var bg_music_playing : bool = true ## Set in menu
@@ -16,26 +13,13 @@ var scene_previous : String = "res://Scenes/game.tscn" ## string "res://Scenes/.
 @export var playerLvl = 1
 @export var shovelLvl = 1 ## level of snow removal tool
 ## not needed? @export var player_position : int = 0 ## Player's position on sidewalk 
-@export var player_spawn_position : Vector2 = Vector2(70,560)
+@export var player_spawn_position : Vector2 = Vector2(10,560)
 @export var player_cash : int = 0 ## ammount of money player has earned, starting with zero
 
 #SnowTracker
 const MAX_SNOW_LEVEL = 8 ## Max lvl of snow, coincides with largest available animation frame
 const MAX_SNOW_BLOCK = 10 ## Max number of blocks present for shoveling (unneccessary?)
 ## not needed? @export var current_snow_levels = [1,1,1,1,1,1,1,1,1,1] ## Snow level per square ( Snow#:level)
-
-func _ready() -> void:
-	set_timer()
-
-func _on_timer_timeout(): ## need to add the daily reset shtuff here
-	print("Time's up for the day!")
-
-func set_timer() -> void:
-	%Timer.wait_time = timer_max
-
-func start_timer() -> void:
-	set_timer()
-	%Timer.start()
 
 
 #might need reworking depending on how music get's set up...

@@ -3,14 +3,36 @@
 [ext_resource type="SpriteFrames" uid="uid://c7703a5py3wii" path="res://Graphics/snow-sidewalk-frames.tres" id="1_f6i1r"]
 [ext_resource type="Script" uid="uid://qe8pb5qwk0o5" path="res://Scripts/snow_block.gd" id="1_yraww"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga5kc"]
+size = Vector2(101, 485)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e78ct"]
+size = Vector2(126, 502)
+
 [node name="SnowBlock" type="Node2D" unique_id=728841707]
 script = ExtResource("1_yraww")
-locked = null
-snowHP = null
-snowlvl = null
-start_snow_HP = null
 
 [node name="SnowUnit" type="AnimatedSprite2D" parent="." unique_id=1795113924]
 unique_name_in_owner = true
 sprite_frames = ExtResource("1_f6i1r")
 frame = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SnowUnit" unique_id=1247776044]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnowUnit/StaticBody2D" unique_id=1149283382]
+position = Vector2(-0.5, 4.5)
+shape = SubResource("RectangleShape2D_ga5kc")
+
+[node name="Area2D" type="Area2D" parent="SnowUnit" unique_id=2002976095]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnowUnit/Area2D" unique_id=1360986019]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_e78ct")
+
+[node name="SnowTimer" type="Timer" parent="." unique_id=1736664898]
+wait_time = 1.812
+autostart = true
+ignore_time_scale = true
+
+[connection signal="body_shape_entered" from="SnowUnit/Area2D" to="." method="_on_area_2d_body_shape_entered"]
+[connection signal="timeout" from="SnowTimer" to="." method="_on_snow_timer_timeout"]

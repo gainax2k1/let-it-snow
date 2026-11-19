@@ -12,7 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	update_snow_hp()
 
 func update_snow_hp() -> void:
 	if locked:
@@ -21,12 +21,12 @@ func update_snow_hp() -> void:
 	if snowHP == 0:
 		lock_snow()
 		hide_snow()
-		%SnowUnit.frame(0) ## sets to 0 frame, which is "empty"
+		%SnowUnit.frame = 0 ## sets to 0 frame, which is "empty"
 		GameManager.player_cash += 69 ## to be updated. will be decided by size of snow started with? or maybe just each lvl worth the same ammount. 
 		return
 	
 	var frame_number = snow_level() 
-	%SnowUnit.frame(frame_number)
+	%SnowUnit.frame = frame_number
 	
 
 func add_snow_hp(amount:int = 1) -> void: ## increases snowhp by (int), default 1
@@ -61,3 +61,13 @@ func snow_level() -> int: ## returns the lvl of snow for animation and ...?
 		
 	return dividend
 			
+
+
+func _on_snow_timer_timeout() -> void: ## triggers when it's time to increment snow.
+	add_snow_hp()
+	
+
+
+func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	print("snoblock area2d body shape entered: ", body_rid, body)
+	pass # Replace with function body.

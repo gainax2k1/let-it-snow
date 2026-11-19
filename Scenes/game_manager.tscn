@@ -25,10 +25,3 @@ parameters/looping = true
 
 [node name="SceneTransitionRect" parent="." unique_id=215802461 instance=ExtResource("2_e5fcp")]
 unique_name_in_owner = true
-
-[node name="Timer" type="Timer" parent="." unique_id=464723263]
-unique_name_in_owner = true
-wait_time = 10.0
-ignore_time_scale = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

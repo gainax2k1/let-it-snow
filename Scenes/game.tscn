@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cicaxubwy7nj" path="res://Graphics/sidewalk.png" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://bkw3mgpdrn84s" path="res://Scenes/HeroCat.tscn" id="6_v158k"]
 [ext_resource type="PackedScene" uid="uid://g4d4538q0a70" path="res://Scenes/snow_block.tscn" id="8_v158k"]
+[ext_resource type="Texture2D" uid="uid://5sc33io7f0nt" path="res://Graphics/Dialog-box.png" id="9_h4fw4"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ga5kc"]
-distance = -3.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga5kc"]
+size = Vector2(1677, 229)
 
 [node name="Game" type="Node2D" unique_id=1676320545]
 script = ExtResource("1_1l0tm")
@@ -85,13 +86,13 @@ texture = ExtResource("5_wowpa")
 [node name="SidewalkSurface" type="Area2D" parent="Sidewalk" unique_id=1851909190]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sidewalk/SidewalkSurface" unique_id=1042470271]
-position = Vector2(9, 625)
-shape = SubResource("WorldBoundaryShape2D_ga5kc")
+position = Vector2(761.5, 742.5)
+shape = SubResource("RectangleShape2D_ga5kc")
 
 [node name="HeroCat" parent="." unique_id=1710785071 instance=ExtResource("6_v158k")]
-position = Vector2(70, 559)
-
-[node name="FallingSnow" parent="." unique_id=2066052173 instance=ExtResource("1_ebmjs")]
+unique_name_in_owner = true
+position = Vector2(49, 563)
+disable_mode = 1
 
 [node name="SnowBlock1" parent="." unique_id=728841707 instance=ExtResource("8_v158k")]
 position = Vector2(191, 372)
@@ -122,3 +123,41 @@ position = Vector2(1215, 372)
 
 [node name="SnowBlock10" parent="." unique_id=1015865722 instance=ExtResource("8_v158k")]
 position = Vector2(1343, 372)
+
+[node name="FallingSnow" parent="." unique_id=2066052173 instance=ExtResource("1_ebmjs")]
+
+[node name="Timer" type="Timer" parent="." unique_id=713553142]
+unique_name_in_owner = true
+wait_time = 10.0
+ignore_time_scale = true
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1585190877]
+unique_name_in_owner = true
+visible = false
+offset_left = 36.0
+offset_top = 23.0
+offset_right = 218.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.92941177, 0, 0.49411765, 0.9607843)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Timer:"
+
+[node name="DialogBox" type="Sprite2D" parent="." unique_id=2136159057]
+unique_name_in_owner = true
+visible = false
+position = Vector2(612, 230)
+texture = ExtResource("9_h4fw4")
+
+[node name="Label" type="Label" parent="DialogBox" unique_id=558143615]
+offset_left = -311.0
+offset_top = -55.0
+offset_right = 308.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 49
+text = "Time stop for the day!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

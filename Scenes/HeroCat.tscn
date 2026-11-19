@@ -7,12 +7,13 @@
 size = Vector2(46, 111)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e78ct"]
-size = Vector2(38, 113)
+size = Vector2(38, 100)
 
 [node name="HeroCat" type="CharacterBody2D" unique_id=1710785071]
 script = ExtResource("1_pyhi2")
 
 [node name="HeroCat" type="AnimatedSprite2D" parent="." unique_id=394716228]
+unique_name_in_owner = true
 position = Vector2(-0.99999064, -1)
 scale = Vector2(1.90625, 1.90625)
 sprite_frames = ExtResource("2_1mtmd")
@@ -22,8 +23,8 @@ autoplay = "default"
 position = Vector2(1, 1.5)
 shape = SubResource("RectangleShape2D_ga5kc")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=452073288]
+[node name="Area2D" type="Area2D" parent="." unique_id=1051299651]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=414233396]
-position = Vector2(-2, -0.5)
+position = Vector2(-2, -7)
 shape = SubResource("RectangleShape2D_e78ct")
