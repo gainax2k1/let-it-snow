@@ -39,7 +39,7 @@ func update_snow_hp() -> void:
 	%SnowUnit.frame = frame_number
 	
 
-func add_snow_hp(amount:int = 1) -> void: ## increases snowhp by (int), default 1
+func add_snow_hp(amount:int = 2) -> void: ## increases snowhp by (int), default 1
 	print("add_snow_hp: ", amount)
 	snowHP += amount
 	
