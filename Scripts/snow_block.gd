@@ -10,6 +10,7 @@ var delta_bucket = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	reset_snow()
 	pass # Replace with function body.
 
 
@@ -47,6 +48,7 @@ func add_snow_hp(amount:int = 2) -> void: ## increases snowhp by (int), default 
 	snowHP += amount
 	
 func sub_snow_hp(amount:int = 1) -> void: ## reduces snowhp by (int), default 1
+	amount = 1 * GameManager.shovelLvl
 	print("sub_snow_hp", amount)
 	snowHP -= amount
 	if snowHP < 0:

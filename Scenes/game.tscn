@@ -146,6 +146,7 @@ text = "Timer:"
 
 [node name="DialogBox" type="Sprite2D" parent="." unique_id=2136159057]
 unique_name_in_owner = true
+visible = false
 position = Vector2(612, 230)
 texture = ExtResource("9_h4fw4")
 
@@ -173,11 +174,13 @@ text = "$"
 
 [node name="ShopWindow" type="Sprite2D" parent="." unique_id=1158439843]
 unique_name_in_owner = true
+visible = false
 position = Vector2(616, 431)
 scale = Vector2(0.90312505, 1.890625)
 texture = ExtResource("10_ldgsr")
 
 [node name="UpgradeShovel" type="Button" parent="ShopWindow" unique_id=94297626]
+unique_name_in_owner = true
 offset_left = -292.31842
 offset_top = 12.694214
 offset_bottom = 44.429733
@@ -193,6 +196,7 @@ text = "Double the amount of time you can shovel"
 autowrap_mode = 2
 
 [node name="UpgradeClothing" type="Button" parent="ShopWindow" unique_id=341478747]
+unique_name_in_owner = true
 offset_left = -292.31842
 offset_top = -38.082657
 offset_right = -2.2145386
@@ -216,4 +220,6 @@ offset_bottom = 98.70247
 text = "Next Round"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="ShopWindow/UpgradeShovel" to="." method="_on_upgrade_shovel_pressed"]
+[connection signal="pressed" from="ShopWindow/UpgradeClothing" to="." method="_on_upgrade_clothing_pressed"]
 [connection signal="pressed" from="ShopWindow/NextRound" to="." method="_on_next_round_pressed"]
