@@ -12,9 +12,9 @@ var scene_previous : String = "res://Scenes/game.tscn" ## string "res://Scenes/.
 #player info
 @export var playerLvl = 1
 @export var shovelLvl = 1 ## level of snow removal tool
-## not needed? @export var player_position : int = 0 ## Player's position on sidewalk 
 @export var player_spawn_position : Vector2 = Vector2(10,560)
 @export var player_cash : int = 0 ## ammount of money player has earned, starting with zero
+@export var game_locked : bool = false ## lock to stop progress between rounds
 
 #SnowTracker
 const MAX_SNOW_LEVEL = 8 ## Max lvl of snow, coincides with largest available animation frame

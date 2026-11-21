@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bkw3mgpdrn84s" path="res://Scenes/HeroCat.tscn" id="6_v158k"]
 [ext_resource type="PackedScene" uid="uid://g4d4538q0a70" path="res://Scenes/snow_block.tscn" id="8_v158k"]
 [ext_resource type="Texture2D" uid="uid://5sc33io7f0nt" path="res://Graphics/Dialog-box.png" id="9_h4fw4"]
+[ext_resource type="Texture2D" uid="uid://dvqnc0tw2cbdr" path="res://Graphics/Dialog-box (Copy 1).png" id="10_ldgsr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ga5kc"]
 size = Vector2(1677, 229)
@@ -133,7 +134,6 @@ ignore_time_scale = true
 
 [node name="TimerLabel" type="Label" parent="." unique_id=1585190877]
 unique_name_in_owner = true
-visible = false
 offset_left = 36.0
 offset_top = 23.0
 offset_right = 218.0
@@ -146,7 +146,6 @@ text = "Timer:"
 
 [node name="DialogBox" type="Sprite2D" parent="." unique_id=2136159057]
 unique_name_in_owner = true
-visible = false
 position = Vector2(612, 230)
 texture = ExtResource("9_h4fw4")
 
@@ -160,4 +159,61 @@ text = "Time stop for the day!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CashLabel" type="Label" parent="." unique_id=104627220]
+unique_name_in_owner = true
+offset_left = 200.0
+offset_top = 23.0
+offset_right = 240.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.92941177, 0, 0.49411765, 0.9607843)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "$"
+
+[node name="ShopWindow" type="Sprite2D" parent="." unique_id=1158439843]
+unique_name_in_owner = true
+position = Vector2(616, 431)
+scale = Vector2(0.90312505, 1.890625)
+texture = ExtResource("10_ldgsr")
+
+[node name="UpgradeShovel" type="Button" parent="ShopWindow" unique_id=94297626]
+offset_left = -292.31842
+offset_top = 12.694214
+offset_bottom = 44.429733
+text = "Shovel Upgrade $100"
+
+[node name="Label" type="Label" parent="ShopWindow/UpgradeShovel" unique_id=2061240422]
+layout_mode = 0
+offset_left = 317.7856
+offset_top = -58.710754
+offset_right = 556.9551
+offset_bottom = -5.8181915
+text = "Double the amount of time you can shovel"
+autowrap_mode = 2
+
+[node name="UpgradeClothing" type="Button" parent="ShopWindow" unique_id=341478747]
+offset_left = -292.31842
+offset_top = -38.082657
+offset_right = -2.2145386
+offset_bottom = -7.082657
+text = "Clothing Upgrade $200"
+
+[node name="Label" type="Label" parent="ShopWindow/UpgradeClothing" unique_id=1364627731]
+layout_mode = 0
+offset_left = 327.75082
+offset_top = 59.23967
+offset_right = 560.2769
+offset_bottom = 82.23967
+text = "Double the shoveling rate"
+autowrap_mode = 2
+
+[node name="NextRound" type="Button" parent="ShopWindow" unique_id=933053374]
+offset_left = -178.2699
+offset_top = 67.70247
+offset_right = 180.48444
+offset_bottom = 98.70247
+text = "Next Round"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="ShopWindow/NextRound" to="." method="_on_next_round_pressed"]

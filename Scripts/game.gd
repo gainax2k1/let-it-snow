@@ -15,9 +15,11 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	%TimerLabel.text = "Timer: " +  str(floori(%Timer.time_left))
+	%CashLabel.text = "Money earned: $" + str(GameManager.player_cash)
 	pass
 	
 func _on_timer_timeout(): ## need to add the daily reset shtuff here
+	GameManager.game_locked = true
 	%Timer.stop()
 	print("Time's up for the day!")
 	%DialogBox.visible = true
@@ -34,3 +36,7 @@ func start_timer() -> void:
 func shovel_snow() -> void:
 	
 	return
+
+
+func _on_next_round_pressed() -> void: ## Start next round
+	pass # Replace with function body.

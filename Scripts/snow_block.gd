@@ -5,6 +5,7 @@ extends Node2D
 @export var snowlvl = 1 # starts at 1, 10 hp/level
 @export var start_snow_HP = 10 # snowhp when shoveling begins, resets each day
 @export var digging : bool = false # true when hp being reduced.
+@export var dig_rate : float = .1 ## rate modifier for digging. .1 to start, smaller number is faster 
 var delta_bucket = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -17,13 +18,15 @@ func _process(delta: float) -> void:
 	pass
 	
 func _physics_process(delta: float) -> void:
-	print("delta", delta)
-	if digging:
+	
+	if digging && !GameManager.game_locked:
 		delta_bucket += delta
-		if int(delta_bucket) % 60 == 0:
+		if delta_bucket > dig_rate: ## adjusts  rate of digging
 			delta_bucket = 0
 			sub_snow_hp()
-	update_snow_hp()
+	if !GameManager.game_locked: # stops progress when times up
+		update_snow_hp()
+
 func update_snow_hp() -> void:
 	if locked:
 		return
@@ -73,7 +76,9 @@ func snow_level() -> int: ## returns the lvl of snow for animation and ...?
 	var dividend = ceili(snowHP/10) ## ceili to keep on frame 1 until actually zero
 	if dividend >= GameManager.MAX_SNOW_LEVEL:
 		dividend == GameManager.MAX_SNOW_LEVEL
-		
+	
+	if snowHP > 1 && dividend == 0: ## fixes sub 10hp graphic error
+		return 1	
 	return dividend
 			
 
