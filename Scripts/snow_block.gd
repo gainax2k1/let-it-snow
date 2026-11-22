@@ -3,6 +3,7 @@ extends Node2D
 @export var locked = false
 @export var snowHP = 10 # starts at 10, 10xsnowhp per "level"
 @export var snowlvl = 1 # starts at 1, 10 hp/level
+@export var snow_rate = GameManager.playerLvl + GameManager.shovelLvl
 @export var start_snow_HP = 10 # snowhp when shoveling begins, resets each day
 @export var digging : bool = false # true when hp being reduced.
 @export var dig_rate : float = .1 ## rate modifier for digging. .1 to start, smaller number is faster 
@@ -43,9 +44,9 @@ func update_snow_hp() -> void:
 	%SnowUnit.frame = frame_number
 	
 
-func add_snow_hp(amount:int = 2) -> void: ## increases snowhp by (int), default 1
-	print("add_snow_hp: ", amount)
-	snowHP += amount
+func add_snow_hp() -> void: ## increases snowhp by (int), default 1
+	print("add_snow_hp: ", snow_rate)
+	snowHP += snow_rate
 	
 func sub_snow_hp(amount:int = 1) -> void: ## reduces snowhp by (int), default 1
 	amount = 1 * GameManager.shovelLvl

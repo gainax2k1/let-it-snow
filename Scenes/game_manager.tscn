@@ -10,6 +10,7 @@ script = ExtResource("1_e5fcp")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=392040954]
 stream = ExtResource("2_sq00h")
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="SceneTransitionRect" parent="." unique_id=215802461 instance=ExtResource("2_e5fcp")]

@@ -148,14 +148,14 @@ text = "Timer:"
 [node name="DialogBox" type="Sprite2D" parent="." unique_id=2136159057]
 unique_name_in_owner = true
 visible = false
-position = Vector2(612, 230)
+position = Vector2(612, 166)
 texture = ExtResource("9_h4fw4")
 
 [node name="Label" type="Label" parent="DialogBox" unique_id=558143615]
 offset_left = -311.0
-offset_top = -55.0
+offset_top = -57.0
 offset_right = 308.0
-offset_bottom = 55.0
+offset_bottom = 53.0
 theme_override_font_sizes/font_size = 49
 text = "Time stop for the day!"
 horizontal_alignment = 1
@@ -175,8 +175,9 @@ text = "$"
 
 [node name="ShopWindow" type="Sprite2D" parent="." unique_id=1158439843]
 unique_name_in_owner = true
-position = Vector2(616, 431)
-scale = Vector2(0.90312505, 1.890625)
+visible = false
+position = Vector2(611.00006, 361.50006)
+scale = Vector2(0.9875001, 1.3515627)
 texture = ExtResource("10_ldgsr")
 
 [node name="UpgradeShovel" type="Button" parent="ShopWindow" unique_id=94297626]
@@ -187,11 +188,16 @@ offset_bottom = 44.429733
 text = "Shovel Upgrade $100"
 
 [node name="Label" type="Label" parent="ShopWindow/UpgradeShovel" unique_id=2061240422]
-layout_mode = 0
-offset_left = 308.92743
-offset_top = -48.132233
-offset_right = 548.0969
-offset_bottom = -15.867752
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.072
+anchor_top = -1.6
+anchor_right = 1.8750001
+anchor_bottom = -0.717
+offset_left = -4.4379272
+offset_top = 2.6446
+offset_right = -0.00012207031
+offset_bottom = 6.8866158
 text = "- More time to shovel"
 autowrap_mode = 2
 
@@ -204,11 +210,16 @@ offset_bottom = -7.082657
 text = "Clothing Upgrade $200"
 
 [node name="Label" type="Label" parent="ShopWindow/UpgradeClothing" unique_id=1364627731]
-layout_mode = 0
-offset_left = 313.35645
-offset_top = 54.47934
-offset_right = 545.88257
-offset_bottom = 77.47934
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.095
+anchor_top = 1.7570001
+anchor_right = 1.8280001
+anchor_bottom = 2.457
+offset_left = -4.307312
+offset_top = 0.012336731
+offset_right = 17.786987
+offset_bottom = 1.3123398
 text = "- Increase the shoveling rate"
 autowrap_mode = 2
 
@@ -226,7 +237,17 @@ stream = ExtResource("11_o5yvi")
 [node name="WhistlePlayer" type="AudioStreamPlayer2D" parent="." unique_id=1553490103]
 unique_name_in_owner = true
 
+[node name="CheckButton" type="CheckButton" parent="." unique_id=138518543]
+offset_left = 944.0
+offset_top = 32.0
+offset_right = 1082.0
+offset_bottom = 63.0
+text = "Mute Music
+"
+flat = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="ShopWindow/UpgradeShovel" to="." method="_on_upgrade_shovel_pressed"]
 [connection signal="pressed" from="ShopWindow/UpgradeClothing" to="." method="_on_upgrade_clothing_pressed"]
 [connection signal="pressed" from="ShopWindow/NextRound" to="." method="_on_next_round_pressed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]

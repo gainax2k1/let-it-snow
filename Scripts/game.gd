@@ -74,3 +74,7 @@ func play_purchase() -> void: ## plays checkout sound
 func play_whistle() -> void: ## plays whistle sound
 	%WhistlePlayer.stream = load("res://Audio/whistle.ogg")
 	%WhistlePlayer.play()
+
+
+func _on_check_button_toggled(toggled_on: bool) -> void:
+	GameManager.toggle_bg_music()
