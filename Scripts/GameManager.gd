@@ -6,13 +6,14 @@ var timer_max : float = 10.0 ## amount of time on the clock for the round, to be
 
 #music settings
 var bg_music_playing : bool = true ## Set in menu
-var bg_music_track : String = "res://Audio/gloomy_bg.ogg" ## string "res:// ...ogg"
+var bg_music_track : String = "res://Audio/jingle_bells_beat.ogg" ## string "res:// ...ogg"
 
 #scene transition
 var scene_current: String = "res://Scenes/game.tscn" ## string "res://Scenes/...tcsn"
 var scene_previous : String = "res://Scenes/game.tscn" ## string "res://Scenes/...tcsn"
 
 #player info
+@export var pay_rate = 20 ## money per block cleared
 @export var playerLvl = 1 ## adjusts timer
 @export var playerLvlPrice = 200
 
@@ -30,7 +31,7 @@ const MAX_SNOW_BLOCK = 10 ## Max number of blocks present for shoveling (unnecce
 
 
 #might need reworking depending on how music get's set up...
-func bg_music_play(track_name : String) -> void: ## recieves "res://Audio/Music/...ogg"
+func bg_music_play(track_name : String = "res://Audio/jingle_bells_beat.ogg") -> void: ## recieves "res://Audio/Music/...ogg"
 	if track_name != "":
 		bg_music_track = track_name
 	if bg_music_playing:

@@ -36,7 +36,7 @@ func update_snow_hp() -> void:
 		lock_snow()
 		hide_snow()
 		%SnowUnit.frame = 0 ## sets to 0 frame, which is "empty"
-		GameManager.player_cash += 69 ## to be updated. will be decided by size of snow started with? or maybe just each lvl worth the same ammount. 
+		GameManager.player_cash += GameManager.pay_rate ## to be updated. will be decided by size of snow started with? or maybe just each lvl worth the same ammount. 
 		return
 	
 	var frame_number = snow_level() 
