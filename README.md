@@ -2,5 +2,18 @@
 
 #Let It Snow!
 
-
 Submission for Godot Wild Jam # 99 "Layers" 
+
+#Controls:
+
+Arrows to move your character close to the snow. You automatically shovel while there is still time on the clock.  Between every round, there's a chance to buy upgrades to your shovel and clothing to be able to shovel more snow and for more time! 
+
+Currently, no real ending .  =^.^=
+
+#All  code, music, and graphics by me (gainax2k1)
+
+Music/SFX made on Yamaha PSR-EW300, recorded in Ardour and edited in Audacity
+
+No  AI used in code or assets. All the jank is organic :)
+
+Graphics made in Aseprite
